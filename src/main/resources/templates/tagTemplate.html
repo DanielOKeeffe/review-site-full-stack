@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>A Tag</title>
+</head>
+<body>
+	<h1>A Tag</h1>
+
+	<div th:each="tag: ${tags}">
+		<p th:text="${tag.description}"></p>
+		<a href="http://localhost:8080/show-tags">Back to Tags View</a>
+	</div>
+</body>
+</html>
