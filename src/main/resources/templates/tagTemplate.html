@@ -6,7 +6,7 @@
 <body>
 	<h1>A Tag</h1>
 
-	<div th:each="tag: ${tags}">
+	<div th:each="tag: ${tagsModel}">
 		<p th:text="${tag.description}"></p>
 		<a href="http://localhost:8080/show-tags">Back to Tags View</a>
 	</div>

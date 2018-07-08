@@ -32,8 +32,7 @@ public class ReviewController {
 	}
 
 	@RequestMapping("/category")
-	public String findOneCategory(@RequestParam(value = "id") long categoryId, Model model)
-			throws CategoryNotFoundException {
+	public String findOneCategory(@RequestParam(value = "id") long categoryId, Model model) throws CategoryNotFoundException {
 		Optional<Category> category = categoryRepo.findById(categoryId);
 		if (category.isPresent()) {
 			model.addAttribute("categoriesModel", category.get());
@@ -54,19 +53,19 @@ public class ReviewController {
 
 	@RequestMapping("/show-reviews")
 	public String findAllReviews(Model model) {
-		model.addAttribute("reviews", reviewRepo.findAll());
-		return ("reviews");
+		model.addAttribute("reviewsModel", reviewRepo.findAll());
+		return ("reviewsTemplate");
 	}
 
 	@RequestMapping("/show-categories")
 	public String findAllCategories(Model model) {
-		model.addAttribute("categories", categoryRepo.findAll());
-		return ("categories");
+		model.addAttribute("categoriesModel", categoryRepo.findAll());
+		return ("categoriesTemplate");
 	}
 
 	@RequestMapping("/show-tags")
 	public String findAllTags(Model model) {
-		model.addAttribute("tags", tagRepo.findAll());
-		return ("tags");
+		model.addAttribute("tagsModel", tagRepo.findAll());
+		return ("tagsTemplate");
 	}
 }

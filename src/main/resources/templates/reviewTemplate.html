@@ -6,7 +6,7 @@
 <body>
 	<h1>A Review</h1>
 
-	<div th:each="review: ${reviews}">
+	<div th:each="review: ${reviewsModel}">
 		<p th:text="${review.name}"></p>
 		<p th:text="${review.description}"></p>
 		<img src="${review.image}">

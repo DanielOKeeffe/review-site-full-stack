@@ -6,11 +6,8 @@
 <body>
 	<h1>A List of Categories</h1>
 
-	<div th:each="category: ${categories}">
-		<li>
+	<div th:each="category: ${categoriesModel}">
 		<a th:href="@{/category(id=${category.id})}"  th:text="${category.category}"></a>
-			
-		</li>
 	</div>
 
 </body>

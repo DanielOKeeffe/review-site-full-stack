@@ -68,7 +68,7 @@ public class ReviewControllerMockMvcTest {
 	
 	@Test
 	public void shouldRouteToAllReviewView() throws Exception {
-		mvc.perform(get("/show-reviews")).andExpect(view().name(is("reviews")));
+		mvc.perform(get("/show-reviews")).andExpect(view().name(is("reviewsTemplate")));
 	}
 	
 	@Test
@@ -92,7 +92,7 @@ public class ReviewControllerMockMvcTest {
 	
 	@Test
 	public void shouldRouteToAllCategoriesView() throws Exception {
-		mvc.perform(get("/show-categories")).andExpect(view().name(is("categories")));
+		mvc.perform(get("/show-categories")).andExpect(view().name(is("categoriesTemplate")));
 	}
 	
 	@Test
@@ -116,7 +116,7 @@ public class ReviewControllerMockMvcTest {
 	
 	@Test
 	public void shouldRouteToAllTagsView() throws Exception {
-		mvc.perform(get("/show-tags")).andExpect(view().name(is("tags")));
+		mvc.perform(get("/show-tags")).andExpect(view().name(is("tagsTemplate")));
 	}
 	
 	@Test

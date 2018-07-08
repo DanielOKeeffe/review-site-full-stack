@@ -6,11 +6,8 @@
 <body>
 	<h1>A List of Reviews</h1>
 
-	<div th:each="review: ${reviews}">
-		<li>
+	<div th:each="review: ${reviewsModel}">
 		<a th:href="@{/review(id=${review.id})}"  th:text="${review.name}"></a>
-			
-		</li>
 	</div>
 
 </body>
