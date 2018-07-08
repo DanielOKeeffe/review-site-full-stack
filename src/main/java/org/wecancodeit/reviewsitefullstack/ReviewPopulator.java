@@ -49,23 +49,23 @@ public class ReviewPopulator implements CommandLineRunner {
 		tagRepo.save(red);
 		tagRepo.save(white);
 		
-		Review coorsLight = new Review("Coors Light Beer", "Light and crisp", "./static/images/", beer, alcoholic, cold);
-		Review guinness = new Review("Guinness Beer", "Dark and beautiful", "./static/images/guinness.jpg", beer, alcoholic, cold, dark);
+		Review coorsLight = new Review("Coors Light Beer", "Light and crisp", "/images/guinness.jpg", beer, alcoholic, cold);
+		Review guinness = new Review("Guinness Beer", "Dark and beautiful", "/images/guinness.jpg", beer, alcoholic, cold, dark);
 		reviewRepo.save(coorsLight);
 		reviewRepo.save(guinness);
 		
-		Review dunkin = new Review("Dunkin Donuts Coffee", "Is forever", "./static/images/coffee.jpg", coffee, hot, cold, nonAlcoholic);
-		Review starbucks = new Review("Starbucks Coffee", "Wonderful", "./static/images/coffee.jpg", coffee, hot, cold, nonAlcoholic);
+		Review dunkin = new Review("Dunkin Donuts Coffee", "Is forever", "/images/coffee.jpg", coffee, hot, cold, nonAlcoholic);
+		Review starbucks = new Review("Starbucks Coffee", "Wonderful", "/images/coffee.jpg", coffee, hot, cold, nonAlcoholic);
 		reviewRepo.save(dunkin);
 		reviewRepo.save(starbucks);
 		
-		Review matchaTea = new Review("Matcha Tea", "Refreshing", "./static/images/tea.jpg", tea, cold, green, hot, nonAlcoholic);
-		Review peppermintTea = new Review("Peppermint Tea", "Delicious", "./static/images/tea.jpg", tea, cold, hot, nonAlcoholic);
+		Review matchaTea = new Review("Matcha Tea", "Refreshing", "/images/tea.jpg", tea, cold, green, hot, nonAlcoholic);
+		Review peppermintTea = new Review("Peppermint Tea", "Delicious", "/images/tea.jpg", tea, cold, hot, nonAlcoholic);
 		reviewRepo.save(matchaTea);
 		reviewRepo.save(peppermintTea);
 		
-		Review redWine = new Review("Red Wine", "Is for long days", "./static/images/wine.jpg", wine, alcoholic, cold, red);
-		Review whiteWine = new Review("White Wine", "Relaxing", "./static/images/wine.jpg", wine, alcoholic, cold, white);
+		Review redWine = new Review("Red Wine", "Is for long days", "/images/wine.jpg", wine, alcoholic, cold, red);
+		Review whiteWine = new Review("White Wine", "Relaxing", "/images/wine.jpg", wine, alcoholic, cold, white);
 		reviewRepo.save(redWine);
 		reviewRepo.save(whiteWine);
 	}

@@ -7,8 +7,8 @@
 	<h1>A List of Categories</h1>
 
 	<div th:each="category: ${categoriesModel}">
-		<a th:href="@{/category(id=${category.id})}"  th:text="${category.category}"></a>
+		<a th:href="@{/category(id=${category.id})}"  th:text="${category.beverage}"></a>
 	</div>
-
+	<a href="http://localhost:8080/show-reviews">Back to Reviews View</a>
 </body>
 </html>

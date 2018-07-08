@@ -9,6 +9,6 @@
 	<div th:each="review: ${reviewsModel}">
 		<a th:href="@{/review(id=${review.id})}"  th:text="${review.name}"></a>
 	</div>
-
+	<a href="http://localhost:8080/show-reviews">Back to Reviews View</a>
 </body>
 </html>

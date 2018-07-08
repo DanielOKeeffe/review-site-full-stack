@@ -14,13 +14,13 @@ public class Category {
 	@GeneratedValue
 	private long id;
 
-	private String category;
+	private String beverage;
 	
 	@OneToMany(mappedBy = "beverage")
 	private Collection<Review> reviews;
 
-	public Category(String category) {
-		this.category = category;
+	public Category(String beverage) {
+		this.beverage = beverage;
 	}
 	
 	public Category() {
@@ -30,8 +30,8 @@ public class Category {
 		return id;
 	}
 
-	public String getCategory() {
-		return category;
+	public String getBeverage() {
+		return beverage;
 	}
 	
 	public Collection<Review> getReviews() {

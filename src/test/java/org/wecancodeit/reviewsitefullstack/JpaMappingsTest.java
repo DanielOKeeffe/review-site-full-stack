@@ -44,7 +44,7 @@ public class JpaMappingsTest {
 		
 		Optional<Category> result = categoryRepo.findById(coffeeId);
 		coffee = result.get();
-		assertThat(coffee.getCategory(), is("coffee"));
+		assertThat(coffee.getBeverage(), is("coffee"));
 		assertThat(result, is(Optional.of(coffee)));
 		assertTrue(result.isPresent());
 	}
