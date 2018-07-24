@@ -68,4 +68,5 @@ public class ReviewController {
 		model.addAttribute("tagsModel", tagRepo.findAll());
 		return ("tagsTemplate");
 	}
+	
 }
