@@ -70,6 +70,16 @@ public class Review {
 		return comments;
 	}
 
+	// allowing the collection to add this tag we created in our form
+	public void addTag(Tag newTag) {
+		tags.add(newTag);
+	}
+
+	// allowing the collection to have a tag removed
+	public void removeTag(Tag tagToRemove) {
+		tags.remove(tagToRemove);
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -90,16 +100,6 @@ public class Review {
 		if (id != other.id)
 			return false;
 		return true;
-	}
-
-	//allowing the collection to add this tag we created in our form
-	public void addTag(Tag newTag) {
-		tags.add(newTag);
-	}
-
-	//allowing the collection to have a tag removed
-	public void removeTag(Tag tagToRemove) {
-		tags.remove(tagToRemove);
 	}
 
 }
